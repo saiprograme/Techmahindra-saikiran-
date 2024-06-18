@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Non-Empty Elements</title>
+  <style>
+   
+.box {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.box:not(:empty) {
+  background-color: #66bb6a;
+  border-color: #558b2f;
+  color: white;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <div class="box">I am not empty</div>
+  <div class="box"></div>
+  <div class="box">Another non-empty box</div>
+</body>
+</html>

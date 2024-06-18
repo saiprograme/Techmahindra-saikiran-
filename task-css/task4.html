@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Selectors</title>
+  <style>
+    
+[data-role] {
+  border: 2px solid blue;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+[data-role="admin"] {
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+
+[data-role^="ad"] {
+  color: darkgreen;
+}
+
+
+[data-role$="user"] {
+  color: darkblue;
+}
+
+
+[data-role*="user"] {
+  background-color: lightblue;
+}
+
+
+[data-roles~="user"] {
+  border: 2px solid orange;
+}
+
+
+[data-lang|="en"] {
+  background-color: lightcoral;
+}
+
+  </style>
+</head>
+<body>
+  <div data-role="admin">Admin User</div>
+  <div data-role="user">Regular User</div>
+  <div data-role="guest">Guest User</div>
+  <div data-roles="admin user editor">Admin User Editor</div>
+  <div data-roles="user">Regular User</div>
+  <div data-roles="editor">Editor</div>
+  <div data-lang="en-US">English (US)</div>
+  <div data-lang="en-GB">English (UK)</div>
+  <div data-lang="fr">French</div>
+  <div>No Role</div>
+</body>
+</html>

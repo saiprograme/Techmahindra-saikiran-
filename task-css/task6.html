@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Checkbox with Animation</title>
+  <style>
+    .styled-checkbox {
+  display: none;
+}
+
+/* Container to center the checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Style the custom checkbox label */
+.styled-label {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* The circle inside the checkbox */
+.styled-label::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Checked state styles */
+.styled-checkbox:checked + .styled-label {
+  background-color: #66bb6a;
+}
+
+/* Move the circle to the right when checked */
+.styled-checkbox:checked + .styled-label::after {
+  transform: translateX(20px);
+  background-color: #fff;
+}
+  </style>
+</head>
+<body>
+  <div class="checkbox-container">
+    <input type="checkbox" id="styled-checkbox" class="styled-checkbox">
+    <label for="styled-checkbox" class="styled-label"></label>
+  </div>
+</body>
+</html>
