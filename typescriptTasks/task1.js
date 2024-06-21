@@ -1,0 +1,7 @@
+//function Num(num:number){
+//   console.log("check"+num);
+//}
+//Num(1);
+//Num("sai");
+var num = "sai";
+console.log(num);
